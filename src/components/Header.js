@@ -9,29 +9,34 @@ export default function Header () {
         setShowSideNav(!showSideNav)
     }
 
+    const scroll = (elem) => {
+        console.log(elem)
+        document.getElementById(elem).scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <>
         <header>
             <div className="brand-name">
-                <img src={headerImg} className="header-img" alt="img" />
-                <h1>Delight</h1>
+                <img src={headerImg} className="header-img" alt="Delight Olu-Olagbuji" />
+                <h1><a href='/'>Delight</a></h1>
             </div>
-            <div className="brank-links">
+            <div className="brand-links">
                 <ul>
                     <li>
-                        <a href="c">Contact</a>
+                        <span onClick={()=>{scroll('contact')}}>Contact</span>
                     </li>
                     <li>
-                        <a href="d">About</a>
+                        <span onClick={()=>{scroll('about')}}>About</span>
                     </li>
                     <li>
-                        <a href="r" className="active">Resume</a>
+                        <span onClick={()=>{scroll('resume')}} className="active">Resume</span>
                     </li>
                     <li>
-                        <a href="f">Projects</a>
+                        <span onClick={()=>{scroll('projects')}}>Projects</span>
                     </li>
                     <li>
-                        <a href="s">Blog</a>
+                        <span onClick={()=>{scroll('blog')}}>Blog</span>
                     </li>
                 </ul>
                 <span onClick={toggle} className="menu-bar">&#8801;</span>
@@ -41,15 +46,15 @@ export default function Header () {
         {
             showSideNav &&
             <nav className="nav">
-            <span onClick={toggle} className="close">&#10006;</span>
-            <ul>
-                <a href="index.html">Contact</a>
-                <a href="#features">About</a>
-                <a className="hover" href="#pricing">Resume</a>
-                <a href="#faq">Projects</a>
-                <a href="#reviews">Blog</a>
-            </ul>
-        </nav>}
+                <span onClick={toggle} className="close">&#10006;</span>
+                <ul>
+                    <span className='link' onClick={()=>{scroll('contact')}}>Contact</span>
+                    <span className='link' onClick={()=>{scroll('about')}} >About</span>
+                    <span className='link hover' onClick={()=>{scroll('resume')}}>Resume</span>
+                    <span className='link' onClick={()=>{scroll('projects')}}>Projects</span>
+                    <span className='link' onClick={()=>{scroll('blog')}}>Blog</span>
+                </ul>
+            </nav>}
         </>
     )
 }

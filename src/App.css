@@ -2,7 +2,23 @@ body {
   color: #ffffff;
   box-sizing: border-box;
   transition: all 0.5s;
+  margin: 0;
+  padding: 0;
 }
+
+.body-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.slide {
+  opacity: 0; /* Initially, hide the box */
+  transform: translateY(20px); /* Initial position, slightly below */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
 nav {
   position: fixed;
   width: 250px;
@@ -21,7 +37,7 @@ nav ul {
   margin: 70px 0 16px;
   list-style-type: none;
 }
-nav span {
+nav .close {
   color: #fff;
   float: right;
   margin: 20px;
@@ -29,11 +45,11 @@ nav span {
   cursor: pointer;
 }
 @media screen and (min-width: 769px) {
-  .header span {
+  .header .menu-bar {
       display: none;
   }
 }
-nav a {
+nav .link {
   padding: 20px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -41,17 +57,15 @@ nav a {
   color: #fff;
   text-decoration: none;
   display: block;
+  font-size: 20px;
 }
 .hover {
   background-color: orange;
   color: #000;
 }
-nav a:hover {
+nav .link:hover {
   background-color: orange;
   color: #000;
-}
-h1 {
-  color: orange;
 }
 header {
   position: fixed;
@@ -63,16 +77,18 @@ header {
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #000;
+  background-color: #2c2c3c;
   z-index: 1;
 }
 .brand-name {
   display: flex;
   align-items: center
 }
-.brand-name h1 {
+.brand-name h1, .brand-name a {
   margin: 0;
   font-size: 20px;
+  color: #fff;
+  text-decoration: none;
 }
 .header-img {
   width: 50px;
@@ -87,33 +103,35 @@ header {
   background-color: #ffffff !important;
   color: orange;
 }
-.brank-links ul {
+.brand-links ul {
   display: flex;
   list-style-type: none;
 }
-.brank-links ul li {
+.brand-links ul li {
   padding: 0;
 }
-.brank-links ul li a {
+.brand-links ul li span {
   padding: 10px 20px;
   text-decoration: none;
   color: #ffffff;
   border-radius: 5px;
   font-weight: bold;
   transition: all 0.5s;
+  cursor: pointer;
 }
-.brank-links ul li a:hover {
+.brand-links ul li span:hover {
   background-color: orange;
 }
 .menu-bar {
   font-size: 50px;
   cursor: pointer;
   display: none;
+  margin-bottom: 15px;
 }
 .hero {
   top: 80px;
   position: relative;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   text-align: center;
 }
 .hero .container {
@@ -129,6 +147,7 @@ header {
 }
 .hero .intro {
   font-size: 20px;
+  color: #c4c4c4;
 }
 .hero .name {
   display: flex;
@@ -138,53 +157,58 @@ header {
 .hero h1 {
   font-size: 50px;
   margin: 0 0 20px;
+  color: #fff;
+  letter-spacing: 1px;
 }
 .typing span {
   font-size: 25px;
-}
-.cta-social {
-  display: flex;
-  margin: 50px 0 0;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
+  font-family: monospace;
+  color: orange;
 }
 .cta {
+  display: inline-block;
   background-color: orange;
-  padding: 15px 30px;
-  border-radius: 50px;
+  padding: 15px 40px;
+  margin-top: 40px;
+  border-radius: 10px;
   font-weight: bold;
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
+  transition: all .5s;
 }
-.hero .container .social {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-.hero .container .social a {
-  background-color: #fff;
-  border-radius: 100%;
-  padding: 10px 10px 1px;
-}
-.hero .container .social a img {
-  width: 30px;
+.cta:hover {
+  transform: scale(1.1);
 }
 .about {
-  margin: 100px 20px 200px;
+  margin: 100px auto 200px;
   text-align: center;
   padding: 20px;
+  max-width: 800px;
   border-radius: 10px;
-  background: rgba(37, 37, 37, 0.47);
+  background: rgba(97, 96, 96, 0.47);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
+  box-sizing: border-box;
+  scroll-margin-top: 100px;
+}
+.about:hover {
+  transform: scale(1.05);
+}
+.about p {
+  text-align: left;
+  color: #c4c4c4;
 }
 .skills {
+  position: relative;
   text-align: center;
-  margin-bottom: 200px;
+  margin: 0 auto 200px;
+  max-width: 1000px;
+  scroll-margin-top: 100px;
+  transition: all 0.5s;
 }
 .skills h1 {
   margin-bottom: 40px;
@@ -209,7 +233,10 @@ header {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.5s;
+  transition: all 0.2s;
+}
+.skills .skill:hover {
+  transform: scale(1.1);
 }
 .skills .skill img {
   width: 80px;
@@ -220,12 +247,42 @@ header {
   margin-top: 5px;
 }
 .resume {
+  margin: 100px auto 200px;
   text-align: center;
-  margin-bottom: 100px;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+  background: rgba(97, 96, 96, 0.47);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
+  box-sizing: border-box;
+  scroll-margin-top: 100px;
+}
+.resume:hover {
+  transform: scale(1.05);
+}
+.resume p {
+  font-size: 20px;
+  color: #c4c4c4;
+}
+.resume a {
+  display: inline-block;
+  margin: 25px 0;
+  padding: 15px 20px;
+  text-decoration: none;
+  background-color: orange;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 7px;
 }
 .projects {
   padding: 20px;
   margin-bottom: 100px;
+  scroll-margin-top: 100px;
+  transition: all 0.5s;
 }
 .projects h1 {
   margin-bottom: 40px;
@@ -246,6 +303,9 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
 }
+.projects .project:hover {
+  transform: scale(1.02);
+}
 .projects .project img {
   width: 100%;
   max-width: 320px;
@@ -256,7 +316,7 @@ header {
   box-sizing: border-box;
 }
 .projects h1.project-meta-title {
-  margin: 5px 0 15px;
+  margin: 20px 0 15px;
   text-align: left;
 }
 .projects .project-meta .stack {
@@ -282,53 +342,86 @@ header {
   background-color: greenyellow;
 }
 .project .project-meta .project-meta-description {
-  max-height: 126px;
+  height: 110px;
   overflow: hidden;
+  color: #e4e1e1;
 }
 .project .project-meta a {
   display: inline-block;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 13px 5px;
   color: #000;
-  background-color: #fff;
-  padding: 10px;
-  margin: 15px 0 0;
-  width: 60%;
+  background-color: #e4e1e1;
+  margin: 5px 5px 0;
   text-align: center;
-  box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .row-reverse {
   flex-direction: row-reverse;
   justify-content: space-between;
 }
 .contact {
-  margin-bottom: 100px;
+  margin: 100px auto 200px;
   text-align: center;
+  padding: 20px 20px 50px;
+  max-width: 800px;
+  border-radius: 10px;
+  background: rgba(97, 96, 96, 0.47);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
+  box-sizing: border-box;
+  scroll-margin-top: 100px;
+}
+.contact:hover {
+  transform: scale(1.05);
+}
+.contact p {
+  margin: 25px 0 40px;
+  font-size: 20px;
+  color: #c4c4c4;
 }
 .contact .contact-links {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
+}
+.contact .contact-links a {
+  background-color:#e4e1e1;
+  padding: 5px 10px;
+  border-radius: 7px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
 }
 .blog {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 180px;
+  scroll-margin-top: 100px;
+  transition: all 0.5s;
 }
 .blog h1.title {
   margin-bottom: 40px;
 }
 .blog .container {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  margin: auto;
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px;
+  max-width: 1200px;
 }
 .blog .container article {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 340px;
   text-align: left;
   border-radius: 10px;
   background: rgba(97, 96, 96, 0.47);
@@ -338,10 +431,14 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
 }
+.blog .container article:hover {
+  transform: scale(1.05);
+}
 .blog .container article .img {
   position: relative;
-  width: 300px;
-  padding-bottom: 100%;
+  width: 340px;
+  padding-bottom: 50%;
+  overflow: hidden;
 }
 .blog .container article .img img {
   position: absolute;
@@ -351,35 +448,46 @@ header {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.blog .container article p, .blog .container article h1 {
-  padding: 10px;
+.blog .container article p {
+  padding: 0 15px 5px;
   margin: 0;
+  height: 60px;
+  font-size: 15px;
+  color: #c4c4c4;
+  overflow: hidden;
+}
+.blog .container article h1 {
+  padding: 15px;
+  margin: 0;
+  color: #fff;
 }
 .blog .container article a {
   display: inline-block;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 25px;
   color: #000;
   background-color: #fff;
-  padding: 10px;
-  margin: 10px 10px 15px;
-  width: 60%;
+  margin: 10px 15px 20px;
   text-align: center;
-  box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 footer {
   text-align: center;
   padding: 100px 20px;
   opacity: .5;
-  background: rgba(255, 255, 255, 0.17);
+  background: rgba(97, 96, 96, 0.47);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.6px);
   -webkit-backdrop-filter: blur(6.6px);
 }
+@media screen and (max-width: 850px) {
+  .about, .resume, .contact {
+    margin: 100px 20px 200px;
+  }
+}
 @media screen and (max-width: 690px) {
-  .brank-links ul {
+  .brand-links ul {
     display: none;
   }
   .menu-bar {
@@ -405,6 +513,9 @@ footer {
     text-align: center;
     justify-content: center;
   }
+  .project-meta-title {
+    margin-top: 0 !important;
+  }
 }
 @media screen and (max-width: 450px) {
   .hero .name h1 {
@@ -426,5 +537,19 @@ footer {
   .skills .skill {
     width: 130px;
     height: 130px;
+  }
+  .hero .name h1 {
+    font-size: 25px;
+  }
+  .typing span {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .hero .name h1 {
+    font-size: 20px;
+  }
+  .typing span {
+    font-size: 15px;
   }
 }

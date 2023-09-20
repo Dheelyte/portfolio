@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ReactTyped from "react-typed";
-import GitHubSVG from "../images/github.svg"
-import LinkedInVG from "../images/linkedin.svg"
-import TwitterSVG from "../images/twitter.svg"
  
 
 export default function Hero () {
+
+    const scroll = (elem) => {
+        console.log(elem)
+        document.getElementById(elem).scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <div className="hero">
             <div className="container">
@@ -18,7 +21,7 @@ export default function Hero () {
                     <span>
                     I'm a{" "}
                     <ReactTyped
-                    strings={["Software Engineer", "Web Developer", "Technical Writer"]}
+                    strings={["Software Engineer", "Technical Writer", "Problem Solver"]}
                     typeSpeed={100}
                     loop
                     backSpeed={20}
@@ -29,12 +32,8 @@ export default function Hero () {
                 </div>
 
                 <div className="cta-social">
-                    <a href='mailto:olagbujidelight@gmail.com' className="cta">Contact Me</a>
-                    <div className="social">
-                        <a href='https://github.com/Dheelyte'><img src={GitHubSVG} alt='github' /></a>
-                        <a href='https://www.linkedin.com/in/delight-olagbuji' all='inkedin'><img src={LinkedInVG} /></a>
-                        <a href='https://twitter.com/DelightGbolahan' alt='Twitter'><img src={TwitterSVG} /></a>
-                    </div>
+                    <span onClick={()=>{scroll('contact')}} className="cta">Contact Me</span>
+                    
                 </div>
                 
             </div>

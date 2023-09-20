@@ -1,7 +1,8 @@
 export default function Footer () {
     return (
         <footer>
-            © 2023 Delight Olu-Olagbuji
+            Made with React by Delight
+            <p>© {new Date().getFullYear()}</p>
         </footer>
     )
 }

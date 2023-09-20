@@ -1,8 +1,14 @@
+import useSlide from "./useSlide";
+
 export default function Resume () {
+
+    const [ containerRef ] = useSlide()
+
     return (
-        <div className="resume">
-            <h1>My resume</h1>
-            <a href="resume.html">Get</a>
+        <div ref={containerRef} className="slide resume" id="resume">
+            <h1>My Resume</h1>
+            <p>My Resume showcases my career journey and work experience</p>
+            <a href="https://drive.google.com/file/d/1PFs6NgM0xtIXnIxuUYMGR4UbsEMTwg1n/view?usp=sharing">See my Resume</a>
         </div>
     )
 }

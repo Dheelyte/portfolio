@@ -1,3 +1,4 @@
+import useSlide from "./useSlide";
 import python from "../images/python.svg"
 import javascript from "../images/javascript.svg"
 import django from "../images/django.svg"
@@ -7,11 +8,15 @@ import postgresql from "../images/postgresql.svg"
 import HTML from "../images/html.svg"
 import CSS from "../images/css.svg"
 import nginx from "../images/nginx.svg"
+import aws from "../images/aws.svg"
 
 
 export default function Skills () {
+
+    const [ containerRef ] = useSlide()
+
     return (
-        <div className="skills">
+        <div ref={containerRef} className="slide skills" id="skills">
             <h1>Skills & Technologies</h1>
             <div className="container">
                 <div className="skill">
@@ -49,6 +54,10 @@ export default function Skills () {
                 <div className="skill">
                     <img src={nginx} alt="" />
                     <p>Nginx</p>
+                </div>
+                <div className="skill">
+                    <img src={aws} alt="" />
+                    <p>AWS</p>
                 </div>
             </div>
         </div>
