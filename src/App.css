@@ -1,5 +1,5 @@
 body {
-  color: #ffffff;
+  color: #fff;
   box-sizing: border-box;
   transition: all 0.5s;
   margin: 0;
@@ -26,11 +26,11 @@ nav {
   top: 0;
   right: 0;
   z-index: 1;
-  background: rgba(37, 37, 37, 0.47);
+  background: rgb(44, 44, 60, 0.8);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
 }
 nav ul {
@@ -65,9 +65,8 @@ nav .link {
 }
 nav .link:hover {
   background-color: orange;
-  color: #000;
 }
-header {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -96,13 +95,6 @@ header {
   margin-right: 10px;
   border-radius: 60px;
 }
-.active {
-  background-color: orange;
-}
-.active:hover {
-  background-color: #ffffff !important;
-  color: orange;
-}
 .brand-links ul {
   display: flex;
   list-style-type: none;
@@ -113,14 +105,23 @@ header {
 .brand-links ul li span {
   padding: 10px 20px;
   text-decoration: none;
-  color: #ffffff;
   border-radius: 5px;
   font-weight: bold;
   transition: all 0.5s;
   cursor: pointer;
+  color: #fff;
 }
 .brand-links ul li span:hover {
   background-color: orange;
+  color: #fff;
+}
+.active {
+  background-color: orange;
+  color: #fff !important;
+}
+.active:hover {
+  background-color: #ffffff;
+  color: #2c2c3c !important;
 }
 .menu-bar {
   font-size: 50px;
@@ -131,7 +132,7 @@ header {
 .hero {
   top: 80px;
   position: relative;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
   text-align: center;
 }
 .hero .container {
@@ -167,13 +168,13 @@ header {
 }
 .cta {
   display: inline-block;
-  background-color: orange;
-  padding: 15px 40px;
+  background-color: #fff;
+  padding: 12px 30px;
   margin-top: 40px;
   border-radius: 10px;
   font-weight: bold;
   text-decoration: none;
-  color: #fff;
+  color: #2c2c3c;
   cursor: pointer;
   transition: all .5s;
 }
@@ -186,10 +187,9 @@ header {
   padding: 20px;
   max-width: 800px;
   border-radius: 10px;
-  background: rgba(97, 96, 96, 0.47);
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
   box-sizing: border-box;
@@ -201,6 +201,9 @@ header {
 .about p {
   text-align: left;
   color: #c4c4c4;
+}
+.about .inline-link {
+  color: orange;
 }
 .skills {
   position: relative;
@@ -228,10 +231,9 @@ header {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  background: rgba(97, 96, 96, 0.47);
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.2s;
 }
@@ -252,10 +254,9 @@ header {
   padding: 20px;
   max-width: 800px;
   border-radius: 10px;
-  background: rgba(97, 96, 96, 0.47);
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
   box-sizing: border-box;
@@ -283,6 +284,7 @@ header {
   margin-bottom: 100px;
   scroll-margin-top: 100px;
   transition: all 0.5s;
+  text-align: center;
 }
 .projects h1 {
   margin-bottom: 40px;
@@ -296,10 +298,9 @@ header {
   margin: 0 auto 70px;
   border-radius: 10px;
   max-width: 1000px;
-  background: rgba(97, 96, 96, 0.47);
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
 }
@@ -313,6 +314,7 @@ header {
 .projects .project-meta {
   padding: 0 20px 20px;
   width: 100%;
+  text-align: left;
   box-sizing: border-box;
 }
 .projects h1.project-meta-title {
@@ -366,10 +368,9 @@ header {
   padding: 20px 20px 50px;
   max-width: 800px;
   border-radius: 10px;
-  background: rgba(97, 96, 96, 0.47);
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
   box-sizing: border-box;
@@ -420,14 +421,13 @@ header {
 }
 .blog .container article {
   position: relative;
-  width: 100%;
+  width: 90%;
   max-width: 340px;
   text-align: left;
   border-radius: 10px;
-  background: rgba(97, 96, 96, 0.47);
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
 }
@@ -436,7 +436,8 @@ header {
 }
 .blog .container article .img {
   position: relative;
-  width: 340px;
+  width: 100%;
+  max-width: 340px;
   padding-bottom: 50%;
   overflow: hidden;
 }
@@ -471,11 +472,27 @@ header {
   text-align: center;
   border-radius: 7px;
 }
+.article-more, .projects-more {
+  background-color: #2c2c3c;
+  color: #fff;
+  padding: 15px 25px;
+  margin: 20px auto 0px;
+  border: none;
+  outline: 1px solid #ddd;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.article-more:hover, .projects-more:hover {
+  background-color: #fff;
+  color: #2c2c3c;
+  outline: 1px solid #2c2c3c;
+}
 footer {
   text-align: center;
   padding: 100px 20px;
   opacity: .5;
-  background: rgba(97, 96, 96, 0.47);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.6px);
@@ -496,9 +513,9 @@ footer {
   .hero .name h1 {
     font-size: 40px;
   }
+  
   .projects .project {
     flex-direction: column;
-    text-align: center;
     padding: 20px;
   }
   .projects .project img {
@@ -510,16 +527,17 @@ footer {
   }
   .projects .project .project-meta-title, .projects .project .stack  {
     font-size: 25px;
-    text-align: center;
-    justify-content: center;
   }
   .project-meta-title {
     margin-top: 0 !important;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 455px) {
   .hero .name h1 {
     font-size: 30px;
+  }
+  .typing span {
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -533,7 +551,7 @@ footer {
     width: 20px;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
   .skills .skill {
     width: 130px;
     height: 130px;

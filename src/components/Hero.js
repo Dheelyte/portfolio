@@ -14,14 +14,14 @@ export default function Hero () {
             <div className="container">
                 <p className='intro'>Hi, my name is</p>
                 <div className="name">
-                    <h1>Delight </h1>
-                    <h1> Olu-Olagbuji</h1>
+                    <h1>Delight</h1>
+                    <h1>Olu-Olagbuji</h1>
                 </div>
                 <div className='typing'>
                     <span>
                     I'm a{" "}
                     <ReactTyped
-                    strings={["Software Engineer", "Technical Writer", "Problem Solver"]}
+                    strings={["Software Engineer", "Technical Writer"]}
                     typeSpeed={100}
                     loop
                     backSpeed={20}

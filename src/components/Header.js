@@ -16,7 +16,7 @@ export default function Header () {
 
     return (
         <>
-        <header>
+        <div className='header'>
             <div className="brand-name">
                 <img src={headerImg} className="header-img" alt="Delight Olu-Olagbuji" />
                 <h1><a href='/'>Delight</a></h1>
@@ -41,7 +41,7 @@ export default function Header () {
                 </ul>
                 <span onClick={toggle} className="menu-bar">&#8801;</span>
             </div>
-        </header>
+        </div>
 
         {
             showSideNav &&

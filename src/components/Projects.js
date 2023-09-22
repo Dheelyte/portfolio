@@ -138,6 +138,7 @@ export default function Projects () {
                     </a>
                 </div>
             </div>
+            <a href="https://github.com/Dheelyte" className="projects-more">See more</a>
         </div>
     )
 }
