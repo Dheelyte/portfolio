@@ -24,7 +24,7 @@ export default function About () {
                 bootcamp organized by Microsoft Learners Student Ambassadors (MLSA).
             </p>
             <p>
-                When I'm not writing code, I'm usually either watching a movie, writing <a className="inline-link" href='https://delighto.medium.com'>tech articles</a> or taking
+                When I'm not writing code, I'm usually either watching a movie, writing <a className="inline-link" href='https://delighto.medium.com' target="_blank" rel="noreferrer">tech articles</a> or taking
                 pictures of beautiful skies. I also speak English, French and Yoruba.
             </p>
         </div>

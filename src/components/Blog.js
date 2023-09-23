@@ -22,7 +22,7 @@ export default function Blog () {
                     <h1>Python Code Optimization Guide</h1>
                     <p>Code optimization involves making your code run faster and use less resources, hence increasing its performance and efficiency...
                     </p>
-                    <a href="https://python.plainenglish.io/python-optimization-guide-make-your-code-run-5x-faster-d3d77fc76d7a">Read</a>
+                    <a href="https://python.plainenglish.io/python-optimization-guide-make-your-code-run-5x-faster-d3d77fc76d7a" target="_blank" rel="noreferrer">Read</a>
                 </article>
                 <article>
                     <div className="img">
@@ -30,7 +30,7 @@ export default function Blog () {
                     </div>
                     <h1>Build, Test and Deploy a URL Shortener with Django</h1>
                     <p>Heard of bit.ly and tinyurl? Those are examples of URL Shorteners. Let's build our own with Python and Django.</p>
-                    <a href="https://delighto.hashnode.dev/build-test-deploy-url-shortener-app-with-django">Read</a>
+                    <a href="https://delighto.hashnode.dev/build-test-deploy-url-shortener-app-with-django" target="_blank" rel="noreferrer">Read</a>
                 </article>
                 <article>
                     <div className="img">
@@ -38,7 +38,7 @@ export default function Blog () {
                     </div>
                     <h1>The Beginner's Guide to Git & GitHub</h1>
                     <p>Imagine working on a project in which you aren't able to keep track of file changes, or revert to previous versions...</p>
-                    <a href="https://delighto.hashnode.dev/git-github-beginner-advanced-guide">Read</a>
+                    <a href="https://delighto.hashnode.dev/git-github-beginner-advanced-guide" target="_blank" rel="noreferrer">Read</a>
                 </article>
                 {showMore && (
                     <>
@@ -48,7 +48,7 @@ export default function Blog () {
                             </div>
                             <h1>Understanding Python Comprehension</h1>
                             <p>A concise syntax for creating lists, dicts, and sets which enhances code readability and efficiency.</p>
-                            <a href="https://python.plainenglish.io/write-better-code-with-python-comprehension-bad8376e44ee">Read</a>
+                            <a href="https://python.plainenglish.io/write-better-code-with-python-comprehension-bad8376e44ee" target="_blank" rel="noreferrer">Read</a>
                         </article>
                         <article>
                             <div className="img">
@@ -56,7 +56,7 @@ export default function Blog () {
                             </div>
                             <h1>Linux: Shell Navigation & Permissions</h1>
                             <p>Learn how to navigate a Linux system, work with files, directories, and understand Linux permissions.</p>
-                            <a href="https://delighto.hashnode.dev/introduction-to-linux-shell-navigation-permissions-968362aac6b9">Read</a>
+                            <a href="https://delighto.hashnode.dev/introduction-to-linux-shell-navigation-permissions-968362aac6b9" target="_blank" rel="noreferrer">Read</a>
                         </article>
                         <article>
                             <div className="img">
@@ -64,7 +64,7 @@ export default function Blog () {
                             </div>
                             <h1>Get User's Location and Currency in Django</h1>
                             <p>Do not underestimate the power of Geolocation with Django</p>
-                            <a href="https://delighto.hashnode.dev/user-location-country-and-currency-in-django">Read</a>
+                            <a href="https://delighto.hashnode.dev/user-location-country-and-currency-in-django" target="_blank" rel="noreferrer">Read</a>
                         </article>
                     </>
                 )}
