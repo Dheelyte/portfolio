@@ -122,7 +122,7 @@ export default function Projects () {
                     </a>
                 </div>
             </div>
-            <div className="project">
+            <div className="project row-reverse">
                 <img src={drone} alt="title" />
                 <div className="project-meta">
                     <h1 className="project-meta-title">Drone Control App</h1>
