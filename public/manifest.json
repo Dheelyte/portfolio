@@ -3,17 +3,17 @@
   "name": "Delight Olu-Olagbuji",
   "icons": [
     {
-      "src": "Delight Olu-Olagbuji Gbolahan.ico",
+      "src": "Delight-Olu-Olagbuji-Gbolahan.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "Delight Olu-Olagbuji Gbolahan.jpg",
+      "src": "Delight-Olu-Olagbuji-Gbolahan.jpg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "Delight Olu-Olagbuji Gbolahan.jpg",
+      "src": "Delight-Olu-Olagbuji-Gbolahan.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }
