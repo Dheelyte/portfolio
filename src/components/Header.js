@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import headerImg from "../images/Delight Olu-Olagbuji Gbolahan.jpg"
+import headerImg from "../images/Delight-Olu-Olagbuji.jpg"
 
 export default function Header () {
 
