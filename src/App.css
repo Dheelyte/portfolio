@@ -348,7 +348,10 @@ nav .link:hover {
   overflow: hidden;
   color: #e4e1e1;
 }
-.project .project-meta a {
+.project a {
+  color: orange;
+}
+.project .project-meta .link {
   display: inline-block;
   text-decoration: none;
   padding: 10px 13px 5px;

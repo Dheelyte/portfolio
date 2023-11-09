@@ -8,7 +8,7 @@ export default function About () {
         <div ref={containerRef} className="slide about" id="about">
             <h1>About me</h1>
             <p>
-                In 2017, I started my tech journey programming with
+                In 2018, I started my tech journey programming with
                 Scratch and I haven't looked back ever since.
                 Fast forward to a year later, I started learning Python. Python really piqued my
                 interest in programming and I found my self building simple 

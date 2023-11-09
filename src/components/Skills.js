@@ -7,7 +7,7 @@ import mysql from "../images/mysql.svg"
 import postgresql from "../images/postgresql.svg"
 import HTML from "../images/html.svg"
 import CSS from "../images/css.svg"
-import nginx from "../images/nginx.svg"
+import docker from "../images/docker.svg"
 import aws from "../images/aws.svg"
 
 
@@ -52,8 +52,8 @@ export default function Skills () {
                     <p>MySQL</p>
                 </div>
                 <div className="skill">
-                    <img src={nginx} alt="" />
-                    <p>Nginx</p>
+                    <img src={docker} alt="" />
+                    <p>Docker</p>
                 </div>
                 <div className="skill">
                     <img src={aws} alt="" />
